@@ -1,0 +1,9 @@
+Program start
+Declare variable(s)
+Main Function
+Do prompt
+While h < 1
+Do lay bricks
+Function that prompts user for variable h (prompt)
+Function that prints layers of bricks (lay bricks)
+End Program

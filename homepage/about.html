@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>About</title>
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="index.html">Home</a></li>
+                <li><a class="dropdown-item" href="about.html">About</a></li>
+                <li><a class="dropdown-item" href="location.html">Location</a></li>
+                <li><a class="dropdown-item" href="timemachine.html">Time Machine</a></li>
+            </ul>
+          </div>
+    </head>
+    <body>
+        <h1>About</h1>
+        <br>
+        Back to the Future is a 1985 American science fiction film directed by Robert Zemeckis, and written by Zemeckis and Bob Gale. It stars Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover, and Thomas F. Wilson. Set in 1985, the story follows Marty McFly (Fox), a teenager accidentally sent back to 1955 in a time-traveling DeLorean automobile built by his eccentric scientist friend Emmett "Doc" Brown (Lloyd). While in the past, Marty inadvertently prevents his future parents from falling in love – threatening his own existence – and is forced to reconcile the pair and somehow get back to the future.
+        <br>
+        <br>
+        Gale and Zemeckis conceived the idea for Back to the Future in 1980. They were desperate for a successful film after numerous collaborative failures, but the project was rejected more than forty times by various studios because it was not considered raunchy enough to compete with the successful comedies of the era. A development deal was secured with Universal Pictures following Zemeckis's success directing Romancing the Stone (1984). Fox was the first choice to portray Marty but was unavailable; Eric Stoltz was cast instead. Shortly after principal photography began in November 1984, Zemeckis determined Stoltz was not right for the part and made the concessions necessary to hire Fox, including re-filming scenes already shot with Stoltz and adding $4 million to the budget. Back to the Future was filmed in and around California and on sets at Universal Studios. Filming concluded the following April.
+        <br>
+        <br>
+        Following highly successful test screenings, the release date was brought forward to July 3, 1985, giving Back to the Future more time in theaters during the busiest period of the theatrical year. The change resulted in a rushed post-production schedule and some incomplete special effects. Back to the Future was a critical and commercial success, earning $381.1 million to become the highest-grossing film of 1985 worldwide. Critics praised the story, humorous elements, and the cast, particularly Fox, Lloyd, Thompson, and Glover. It received multiple award nominations and won an Academy Award, three Saturn Awards, and a Hugo Award. Its theme song, "The Power of Love" by Huey Lewis and the News, was also a success.
+        <br>
+        <br>
+        Back to the Future has since grown in esteem and is now considered by critics and audiences to be one of the greatest science-fiction films and among the best films ever made. In 2007, the United States Library of Congress selected the film for preservation in the National Film Registry. The film was followed by two sequels, Back to the Future Part II (1989) and Back to the Future Part III (1990). Spurred by the film's dedicated fan following and effect on popular culture, Universal Studios launched a multimedia franchise, which now includes video games, theme park rides, an animated television series, and a stage musical. Its enduring popularity has prompted numerous books about its production, documentaries, and commercials.
+        <br>
+        <br>
+        <h5>Trivia Question: What is the year in which Marty travels to in the second film?</h5>
+            <form>
+                <input autocomplete="off" autofocus placeholder="Answer" type="text"></input>
+                <button id="check" type="button">Confirm</button>
+            </form>
+            <h5 id="twocorrect">Correct!</h5>
+            <h5 id="twoincorrect">Incorrect</h5>
+                <script>
+                let input = document.querySelector('input');
+                document.querySelector('#check').addEventListener('click', function() {
+                if (input.value === '2015') {
+                    input.style.backgroundColor = 'green';
+                    document.getElementById("twocorrect").style.display = 'block';
+                    document.getElementById("twoincorrect").style.display = 'none';
+                } else {
+                    input.style.backgroundColor = 'red';
+                    document.getElementById("twoincorrect").style.display = 'block';
+                    document.getElementById("twocorrect").style.display = 'none';
+                }
+                });
+                </script>
+    </body>
+</html>

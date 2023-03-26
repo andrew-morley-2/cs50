@@ -1,0 +1,53 @@
+.map {
+    box-sizing: content-box;
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-main {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@font-face {
+    font-family: 'BTTF';
+    src: url(BTTF.ttf);
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-family: 'BTTF';
+    font-weight: 'bold';
+    color: '000000';
+}
+
+h3 {
+    margin: 0;
+    text-align: center;
+    font-family: 'BTTF';
+    font-weight: normal;
+    color: '000000';
+}
+
+#outatime {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#twocorrect {
+    display: none;
+}
+
+#twoincorrect {
+    display: none;
+}
