@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the year in which the film Back to the Future was released?</h3>
+                    <button id="incorrectone">1983</button>
+                    <button id="correct">1985</button>
+                    <button id="incorrecttwo">1984</button>
+                    <h4 id="textonecorrect">Correct!</h4>
+                    <h4 id="textoneincorrect">Incorrect</h4>
+                    <script>
+
+                        let button = document.querySelector('button, input[type="submit"]');
+                        document.querySelector('#correct').addEventListener('click', function() {
+                            document.getElementById("correct").style.backgroundColor = 'green';
+                            document.getElementById("textonecorrect").style.display = 'block';
+                        });
+                        document.querySelector('#incorrectone').addEventListener('click', function() {
+                            document.getElementById("incorrectone").style.backgroundColor = 'red';
+                            document.getElementById("textoneincorrect").style.display = 'block';
+                        });
+                        document.querySelector('#incorrecttwo').addEventListener('click', function() {
+                            document.getElementById("incorrecttwo").style.backgroundColor = 'red';
+                            document.getElementById("textoneincorrect").style.display = 'block';
+                        });
+
+                    </script>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is the year in which Marty travels to in the film?</h3>
+                    <form>
+                        <input autocomplete="off" autofocus placeholder="Answer" type="text"></input>
+                        <button id="check" type="button">Confirm</button>
+                    </form>
+                    <h4 id="twocorrect">Correct!</h4>
+                    <h4 id="twoincorrect">Incorrect</h4>
+                    <script>
+                    let input = document.querySelector('input');
+                    document.querySelector('#check').addEventListener('click', function() {
+                if (input.value === '1985') {
+                    input.style.backgroundColor = 'green';
+                    document.getElementById("twocorrect").style.display = 'block';
+                } else {
+                    input.style.backgroundColor = 'red';
+                    document.getElementById("twoincorrect").style.display = 'block';
+                }
+            });
+                    </script>
+            </div>
+        </div>
+    </body>
+</html>
