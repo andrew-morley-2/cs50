@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+<body>
+A share of {{ response["name"] }} ({{ response["symbol"] }}) costs {{ usd(response["price"]) }}.
+<br>
+<br>
+</body>
+{% endblock %}

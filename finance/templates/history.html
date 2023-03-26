@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-start">Symbol</th>
+            <th class="text-end">Shares</th>
+            <th class="text-end">Price</th>
+            <th class="text-end">Transacted</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for buy in buys %}
+        <tr>
+            <td class="text-start">{{ buy["symbol"] }}</td>
+            <td class="text-end">{{ buy["shares"] }}</td>
+            <td class="text-end">{{ usd(buy["price"]) }}</td>
+            <td class="text-end">{{ buy["date"] }}</td>
+        </tr>
+    {% endfor %}
+    {% for sell in sells %}
+        <tr>
+            <td class="text-start">{{ sell["symbol"] }}</td>
+            <td class="text-end">-{{ sell["shares"] }}</td>
+            <td class="text-end">{{ usd(sell["price"]) }}</td>
+            <td class="text-end">{{ sell["date"] }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
