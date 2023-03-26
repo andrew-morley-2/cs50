@@ -1,0 +1,30 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Tunnels
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-start">Tunnel</th>
+            <th class="text-end">Status</th>
+            <th class="text-end">Encapsulation (packets)</th>
+            <th class="text-end">Decapsulation (packets)</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for tunnel_name, tunnel_status, tunnel_encap, tunnel_decap in tunnel_info %}
+        <tr>
+            <td class="text-start">{{ tunnel_name }}</td>
+            <td class="text-end" id="{{'tunnel-green' if tunnel_status == 'up' else 'tunnel-red'}}">{{ tunnel_status }}</td>
+            <td class="text-end">{{ tunnel_encap }}</td>
+            <td class="text-end">{{ tunnel_decap }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

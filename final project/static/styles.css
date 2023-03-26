@@ -1,0 +1,60 @@
+/* Size for nav logo */
+nav .navbar-brand
+{
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+/* Colors for nav logo */
+nav .navbar-brand .orange
+{
+    color: #e04f29;
+}
+
+/* Formatting for header5 */
+h5
+{
+    font-weight: 800;
+}
+
+/* Formatting for up tunnel status */
+#tunnel-green 
+{
+    color:green;
+    font-weight: 800;
+}
+
+/* Formatting for down tunnel status */
+#tunnel-red 
+{
+    color:red;
+    font-weight: 800;
+}
+
+/* Formatting for up sd-wan status */
+#index-green 
+{
+    color:green;
+    font-weight: 800;
+}
+
+/* Formatting for warning sd-wan status */
+#index-orange
+{
+    color:orange;
+    font-weight: 800;
+}
+
+/* Formatting for down sd-wan status */
+#index-red 
+{
+    color:red;
+    font-weight: 800;
+}
+
+/* Formatting for error message/apology */
+#error
+{
+    font-weight: 800;
+    text-transform: uppercase;
+}

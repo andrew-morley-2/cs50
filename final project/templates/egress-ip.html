@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Egress IP
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped" id="data">
+    <thead>
+        <tr>
+            <th class="text-start">Type</th>
+            <th class="text-start">IP Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ip_type, ip in egress_info %}
+        <tr>
+            <td class="text-start">{{ ip_type }}</td>
+            <td class="text-start">{{ ip }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable({
+        columns: [
+        {orderable: false},
+        {orderable: false}],
+      });
+    });
+  </script>
+{% endblock %}

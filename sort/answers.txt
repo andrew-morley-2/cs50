@@ -1,0 +1,11 @@
+sort1 uses: Bubble
+
+How do you know?: This is bubble because of the comparison between its results and the other two.
+
+sort2 uses: Merge
+
+How do you know?: This is merge because it consistently performs great regardless of the type of list.
+
+sort3 uses: Selection
+
+How do you know?: This is selection because for a sorted list with 50000 entries, it takes 5 - 10 times longer to complete.

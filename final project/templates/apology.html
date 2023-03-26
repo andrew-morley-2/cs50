@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <img alt="{{ top }}" class="border img-fluid" src="/static/error.jpg" title="{{ top }}" height="10%" width="10%"></img>
+    <br>
+    <br>
+    <h4 id="error">{{ top }}: {{ bottom }}</h4>
+{% endblock %}

@@ -1,0 +1,4 @@
+Spotify could use the data from these queries in their Spotify Wrapped campaign to provide users with feedback about their listening habits.
+Users could get the top 5 longest songs they listened to, songs by certain artists they listened to such as Post Malone/Drake, or songs that featured multiple artists.
+This information provides additional value to customers and helps them get the most out of the platform.
+Additionally, these queries can be slightly modified to provide even more.

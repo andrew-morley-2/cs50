@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Split Tunneling
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-start">IP Address</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entry in tunneling_info %}
+        <tr>
+            <td class="text-start">{{ entry }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

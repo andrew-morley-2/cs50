@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped" id="data">
+    <thead>
+        <tr>
+            <th class="text-start">Tunnel Name</th>
+            <th class="text-end">Site Status</th>
+            <th class="text-end">Tunnels (Current)</th>
+            <th class="text-end">Prisma GW</th>
+            <th class="text-end">Prisma Access Node</th>
+            <th class="text-end">IPSec Termination Node</th>
+            <th class="text-end">Compute Location</th>
+            <th class="text-end">Bandwidth Allocated</th>
+            <th class="text-end">Peak Burst Bandwidth</th>
+            <th class="text-end">Avg Bandwidth</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tunnel_name, status, palocation, panode, ipsec, compute, aggband, peakband, avgband, tunnelsup, totaltunnels in sites_info %}
+        <tr>
+            <td class="text-start">{{ tunnel_name }}</td>
+            <td class="text-end" id="{{'index-green' if status == 'Up' else ('index-orange' if status == 'Warning' else 'index-red')}}">{{ status }}</td>
+            <td class="text-end">{{ tunnelsup }}/{{ totaltunnels }} Up</td>
+            <td class="text-end">{{ palocation }}</td>
+            <td class="text-end" id="{{'index-green' if panode == 'Up' else ('index-orange' if panode == 'Warning' else 'index-red')}}">{{ panode }}</td>
+            <td class="text-end">{{ ipsec }}</td>
+            <td class="text-end">{{ compute }}</td>
+            <td class="text-end">{{ aggband }}</td>
+            <td class="text-end">{{ peakband }}</td>
+            <td class="text-end">{{ avgband }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable({
+        columns: [
+          null,
+          null,
+          {orderable: false},
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null],
+      });
+    });
+  </script>
+{% endblock %}

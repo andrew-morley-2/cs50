@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    GlobalProtect
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped" id="data">
+    <thead>
+        <tr>
+            <th class="text-start">User</th>
+            <th class="text-end">Location</th>
+            <th class="text-end">Prisma GW</th>
+            <th class="text-end">Country</th>
+            <th class="text-end">Private IP</th>
+            <th class="text-end">Public IP</th>
+            <th class="text-end">Login Time</th>
+            <th class="text-end">Client Info</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for name, location, prismagw, country, privateip, publicip, logintime, clientinfo in users_info %}
+        <tr>
+            <td class="text-start">{{ name }}</td>
+            <td class="text-end">{{ location }}</td>
+            <td class="text-end">{{ prismagw }}</td>
+            <td class="text-end">{{ country }}</td>
+            <td class="text-end">{{ privateip }}</td>
+            <td class="text-end">{{ publicip }}</td>
+            <td class="text-end">{{ logintime }}</td>
+            <td class="text-end">{{ clientinfo }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<br>
+<form action="/globalprotect" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+    </div>
+    <button class="btn btn-primary" type="submit">Force Logout</button>
+</form>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable({
+        columns: [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null],
+      });
+    });
+  </script>
+{% endblock %}
+
